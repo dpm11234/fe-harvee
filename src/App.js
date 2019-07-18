@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
-import Footer from './layout/footer/footer';
+import Home from './pages/home/Home';
+
 
 function App() {
   return (
     <div className="App">
-      
+      <Home />
     </div>
   );
 }
