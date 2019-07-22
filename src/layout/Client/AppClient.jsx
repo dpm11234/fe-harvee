@@ -11,7 +11,7 @@ class AppClient extends Component {
          <div>
             <Route path="/" exact component={Home} />
             <Route path="/contact" component={Contact} />
-            <Route path="/categories" component={Categories} />
+            <Route path="/category" component={Categories} />
 
             <Footer />
          </div>
