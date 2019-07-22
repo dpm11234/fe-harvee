@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 import Home from './../../pages/home/Home';
 import Contact from '../../pages/contact/Contact';
 import Footer from '../../components/footer/Footer';
@@ -12,7 +12,8 @@ class AppClient extends Component {
          <div>
             <Navbar />
 
-            <Route path="/" exact component={Home} />
+            <Route path="/" exact render={() => <Redirect to="/home" />} />
+            <Route path="/home" component={Home}/>
             <Route path="/contact" component={Contact} />
             <Route path="/category" component={Categories} />
 
