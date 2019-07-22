@@ -4,7 +4,7 @@ class Categories extends Component {
    render() {
       return (
          <div> 
-            Categories Works !!!
+            <h1>Categories Works !!!</h1>
          </div>
       );
    }

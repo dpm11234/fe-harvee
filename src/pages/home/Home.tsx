@@ -6,9 +6,6 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <div>
-          <Navbar />
-        </div>
         <div className="hv-home">
           <CarouselComponet />
         </div>
