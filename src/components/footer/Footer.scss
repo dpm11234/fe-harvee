@@ -118,7 +118,6 @@
       transition: all 0.3s;
       > i {
         color: #fff;
-<<<<<<< HEAD
         background-color: #393939;
         margin-bottom: 0;
         width: 35px;
@@ -133,13 +132,6 @@
         &:hover {
           background-color: $harvee;
         }
-=======
-        font-size: 14px;
-        line-height: 35px;
-      }
-      &:hover {
-        background-color: #1ed760;
->>>>>>> 3248134c29f76f4a3cb3696a52bbf86fc0fec699
       }
     }
   }
