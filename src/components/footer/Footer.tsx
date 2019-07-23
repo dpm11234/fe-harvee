@@ -98,11 +98,11 @@ const footer = () => {
                      </div>
                      <div className="col-lg-4 col-md-12">
                         <div className="social text-lg-right text-md-center mt-3 mt-lg-0">
-                           <a href="/abc">
-                              <i className="fa fa-facebook-f" />
+                           <a href="/abc" className="mr-2">
+                           <i className="fab fa-facebook-f"></i>
                            </a>
                            <a href="/abc">
-                              <i className="fa fa-twitter" />
+                           <i className="fab fa-twitter"></i>
                            </a>
                         </div>
                      </div>

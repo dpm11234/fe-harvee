@@ -103,29 +103,27 @@
       span {
          color: #dee2e4;
      }
-
-     .social {
-      a {
-        display: inline-block;
+   }
+   .social {
+    a {
+      display: inline-block;
+      color: #fff;
+      background-color: #393939;
+      margin-bottom: 0;
+      width: 35px;
+      height: 35px;
+      text-align: center;
+      transition: all 0.3s;
+      > i {
         color: #fff;
-        background-color: #393939;
-        margin-bottom: 0;
-        width: 35px;
-        height: 35px;
-        text-align: center;
-        transition: all 0.3s;
-        > i {
-          color: #fff;
-          font-size: 14px;
-          line-height: 35px;
-        }
-        &:hover {
-          background-color: #1ed760;
-        }
+        font-size: 14px;
+        line-height: 35px;
+      }
+      &:hover {
+        background-color: #1ed760;
       }
     }
-
-   }
+  }
 
   }
 
