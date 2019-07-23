@@ -116,7 +116,7 @@ class Navbar extends Component {
                 <a href="/home" className="nav-link mt-2 ">Home</a>
               </div>
               <div className="col-auto  text-uppercase text-center">
-                <a id="cate-scroll-1" className="nav-link mt-2 ">Category
+                <a href="/category" className="nav-link mt-2 ">Category
                
                 </a>
                 <div id="cate-detail-scroll-1" className="harvee-category-detail">
