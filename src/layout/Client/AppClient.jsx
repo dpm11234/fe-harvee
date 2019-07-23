@@ -4,7 +4,7 @@ import Home from './../../pages/home/Home';
 import Contact from '../../pages/contact/Contact';
 import Footer from '../../components/footer/Footer';
 import Categories from '../../pages/categories/Categories';
-import Navbar from '../navbar/Navbar';
+import Navbar from '../../components/navbar/Navbar';
 
 class AppClient extends Component {
    render() {

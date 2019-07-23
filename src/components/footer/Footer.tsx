@@ -1,8 +1,10 @@
 import React from 'react';
-
+import payment from '../../assets/images/payments.png';
 import './Footer.scss';
 
 const footer = () => {
+
+
    return (
       <div className="harvee-footer py-5">
          <div className="container position-relative">
@@ -94,7 +96,7 @@ const footer = () => {
                <div className="col-lg-5 col-md-12">
                   <div className="row">
                      <div className="col-lg-8 d-flex justify-content-between">
-                        <img src="{{ asset('storage/images/payments.png') }}" alt="deom" />
+                        <img src={payment} alt="deom" />
                      </div>
                      <div className="col-lg-4 col-md-12">
                         <div className="social text-lg-right text-md-center mt-3 mt-lg-0">

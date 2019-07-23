@@ -1,7 +1,15 @@
-.carousel-item {
-    height: 500px;
-}
+@import '../../scss/abstracts/variables';
 
-.carousel-inner {
-    height: 500px !important;
+.harvee-infor {
+  background: #eeeeee;
+  .harvee-infor-item {
+    background: #eeeeee;
+    border: white 1px solid;
+  }
+  .harvee-icon {
+    i {
+      color: $harvee;
+      font-size: 40px;
+    }
+  }
 }

@@ -1,4 +1,4 @@
-// @import "../abstracts/variables";
+@import '../../scss/abstracts/variables';
 
 .harvee-navbar {
   background: #ffffff;
@@ -12,7 +12,7 @@
   .harvee-search-bar {
     input {
       background: #eeeeee;
-      color: blue;
+      color: $harvee;
       height: 40px;
       width: 90%;
       border-radius: 5px;
@@ -48,7 +48,7 @@
 
   .harvee-cart {
     font-size: 40px;
-    color: blue;
+    color: $harvee;
   }
 
   .harvee-cart-detail {
@@ -62,7 +62,7 @@
     border: 1px solid #f0f0f0;
     border-top-width: 2px;
     z-index: 1;
-    border-top-color: blue;
+    border-top-color: $harvee;
   }
 
   .harvee-category-detail {
@@ -75,7 +75,7 @@
     box-shadow: 0 29px 28px rgba(0, 0, 0, 0.1);
     border: 1px solid #f0f0f0;
     border-top-width: 2px;
-    border-top-color: blue;
+    border-top-color: $harvee;
     z-index: 1;
   }
 
@@ -85,7 +85,7 @@
       cursor: pointer;
       font-size: 17px;
       font-weight: 700;
-      color: blue !important;
+      color: $harvee !important;
     }
   }
 
@@ -96,6 +96,8 @@
     background: #ffffff !important;
     box-shadow: 0 29px 28px rgba(0, 0, 0, 0.1);
     z-index: 20;
+    position: fixed;
+    top: -60px;
   }
 
   .harvee-nav-mobile {
@@ -106,7 +108,7 @@
 
     .navbar-toggler {
       margin-top: 12px;
-      background: blue !important;
+      background: $harvee !important;
     }
 
     .navbar-toggler-icon {
@@ -115,4 +117,9 @@
       display: block;
     }
   }
+}
+
+.test {
+  top: 0 !important;
+  transition: ease-in-out .4s;
 }

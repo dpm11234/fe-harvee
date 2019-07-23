@@ -1,11 +1,25 @@
 import React, { Component } from 'react';
 import './Navbar.scss';
 import logo from '../../assets/images/logo.png';
-
-console.log(logo);
-
+import { Link } from 'react-router-dom';
 
 class Navbar extends Component {
+
+  handleScroll(nav, navTop) {
+    if (window.scrollY > navTop) {
+      nav.classList.add('test');
+    } else {
+      nav.classList.remove('test');
+    }
+  }
+  componentDidMount() {
+    const nav = document.querySelector('#nav-scroll');
+    const nav2 = document.querySelector('#non-scroll');
+    const navTop = nav2.offsetTop;
+
+    window.addEventListener('scroll', () => this.handleScroll(nav, navTop));
+
+  }
 
   render() {
     return (
@@ -15,8 +29,9 @@ class Navbar extends Component {
             <div className="container">
               <div className="row">
                 <div className="col-lg-4">
-                  <a href="/home">
-                    <img className="harvee-logo" src={logo} alt="Logo" /></a>
+                  <Link to="/">
+                    <img className="harvee-logo" src={logo} alt="Logo" />
+                  </Link>
                 </div>
                 <div className="col-lg-4">
                   <div className="harvee-search-bar pt-4 pb-4 m-2 text-center">
@@ -35,7 +50,7 @@ class Navbar extends Component {
                       </div>
                       <div className="col-lg-4 text-right">
                         <button id="my-cart" className="btn btn-harvee">
-                          <i className="fa fa-cart-plus harvee-cart" />
+                      <i className="far fa-shopping-cart harvee-cart"></i>
                         </button>
                         <div id="cart-detail" className="harvee-cart-detail">
                           <div className="container">
@@ -90,11 +105,11 @@ class Navbar extends Component {
           </div>
           <style dangerouslySetInnerHTML={{ __html: "\n\n    " }} />
           {/* Scroll nav */}
-          <div id="nav-scroll" style={{ top: '-60px', display: 'none', transition: 'top 0.25s ease-out', position: 'fixed' }} className="container-fluid px-4 harvee-nav-link harvee-navbar-scroll d-none d-sm-block">
+          <div id="nav-scroll" className="container-fluid px-4 harvee-nav-link harvee-navbar-scroll d-none d-sm-block">
             <div className="row">
               <div className="col-auto text-center m-1">
                 <a href="home">
-                  <img className="harvee-logo-scroll" src="{{asset('storage/images/logo.png')}}" alt />
+                  <img className="harvee-logo-scroll" src={logo} alt />
                 </a>
               </div>
               <div className="col-auto  text-uppercase text-center">
@@ -128,7 +143,7 @@ class Navbar extends Component {
               </div>
               <div className="col-3 text-right">
                 <button id="my-cart-2" className="btn btn-harvee">
-                  <i className="fa fa-cart-plus harvee-cart" />
+              <i className="far fa-shopping-cart harvee-cart"></i>
                 </button>
                 <div id="cart-detail-2" className="harvee-cart-detail">
                   <div className="container">

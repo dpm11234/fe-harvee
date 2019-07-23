@@ -1,9 +1,11 @@
 import * as React from 'react';
 import { render } from 'react-dom';
+import "jquery/dist/jquery.slim"
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-// import './scss/main.scss';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
+import './scss/main.scss';
+import './style.scss';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
