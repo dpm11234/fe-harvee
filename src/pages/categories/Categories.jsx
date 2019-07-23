@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { UncontrolledCollapse, Button, CardBody, Card } from 'reactstrap';
 import './Categories.scss';
+import watch from '../../assets/images/w.jpg';
 
 class Categories extends Component {
    render() {
@@ -9,159 +11,99 @@ class Categories extends Component {
                <div className="row">
                   <div className="col-lg-3">
                      <div className="col-lg-12 p-0">
-                        <div id="accordion-1" className="harvee-accordion">
+                        <div className="harvee-accordion">
                            <div className="card">
-                              <div className="card-header mt-2" id="fashion">
+                              <div className="card-header">
                                  <h5 className="mb-0 line">
-                                    <button className="btn text-uppercase font-weight-bold collapsed py-4" data-toggle="collapse" data-target="#collapseFashion" aria-expanded="false" aria-controls="collapseFashion">
-                                       type
-                         </button>
+                                    <Button className="w-100 text-uppercase text-left font-weight-bold p-4 btn-collapse" id="togglerType">type</Button>
                                  </h5>
                               </div>
-                              <div id="collapseFashion" className="collapse line" aria-labelledby="fashion" data-parent="#accordion-1">
-                                 <div className="card-body">
-                                    <button className="btn d-block">
-                                       Keyboard
+                              <UncontrolledCollapse toggler="#togglerType">
+                                 <Card>
+                                    <CardBody>
+                                       <div className="card-body">
+                                          <button className="btn d-block">
+                                             Keyboard
                          </button>
-                                    <button className="btn d-block">
-                                       Headphone
+                                          <button className="btn d-block">
+                                             Headphone
                          </button>
-                                    <button className="btn d-block">
-                                       Mouse
+                                          <button className="btn d-block">
+                                             Mouse
                          </button>
-                                    <button className="btn d-block">
-                                       RAM
+                                          <button className="btn d-block">
+                                             RAM
                          </button>
-                                    <button className="btn d-block">
-                                       Moniter
+                                          <button className="btn d-block">
+                                             Moniter
                          </button>
-                                    <button className="btn d-block">
-                                       SSD/HDD
+                                          <button className="btn d-block">
+                                             SSD/HDD
                          </button>
-                                 </div>
-                              </div>
+                                       </div>
+                                    </CardBody>
+                                 </Card>
+                              </UncontrolledCollapse>
                            </div>
                         </div>
                         <div id="accordion-4" className="harvee-accordion">
                            <div className="card">
-                              <div className="card-header mt-2" id="brand">
+                              <div className="card-header" id="brand">
                                  <h5 className="mb-0 line">
-                                    <button className="btn text-uppercase font-weight-bold collapsed py-4" data-toggle="collapse" data-target="#collapseBrand" aria-expanded="false" aria-controls="collapseBrand">
-                                       brand
-                         </button>
+                                    <Button className="w-100 text-uppercase text-left font-weight-bold p-4 btn-collapse" id="togglerBrand">brand</Button>
+
                                  </h5>
                               </div>
-                              <div id="collapseBrand" className="collapse line" aria-labelledby="brand" data-parent="#accordion-4">
-                                 <div className="card-body">
-                                    <button className="btn d-block">
-                                       Samsung
-                         </button>
-                                 </div>
-                              </div>
+                              <UncontrolledCollapse toggler="#togglerBrand">
+                                 <Card>
+                                    <CardBody>
+                                       <div className="card-body">
+                                          <button className="btn d-block">
+                                             Apple</button>
+
+                                       </div>
+                                    </CardBody>
+                                 </Card>
+                              </UncontrolledCollapse>
                            </div>
                         </div>
                         <div id="accordion-2" className="harvee-accordion">
                            <div className="card">
-                              <div className="card-header mt-2" id="price">
+                              <div className="card-header" id="price">
                                  <h5 className="mb-0 line">
-                                    <button className="btn text-uppercase font-weight-bold collapsed py-4" data-toggle="collapse" data-target="#collapsePrice" aria-expanded="false" aria-controls="collapsePrice">
-                                       price
-                         </button>
+                                    <Button className="w-100 text-uppercase text-left font-weight-bold p-4 btn-collapse" id="togglerPrice">Price</Button>
+
                                  </h5>
                               </div>
-                              <div id="collapsePrice" className="collapse line" aria-labelledby="price" data-parent="#accordion-2">
-                                 <div className="card-body mt-2">
-                                    <div className="container">
-                                       <div className="row">
-                                          <div className="col-lg-12">
-                                             <input name="maxprice" type="text" className="w-100 px-2" placeholder="Max Price $" />
-                                          </div>
-                                          <div className="col-lg-12 my-2">
-                                             <input name="minprice" type="text" className="w-100 px-2" placeholder="Min Price $" />
-                                          </div>
-                                          <div className="col-lg-12 my-2">
-                                             <button className="btn btn-dark text-uppercase harvee-btn-filter py-0">
-                                                filter
-                               </button>
+                              <UncontrolledCollapse toggler="#togglerPrice">
+                                 <Card>
+                                    <CardBody>
+                                       <div className="card-body">
+                                          <div className="container">
+                                             <div className="row">
+                                                <div className="col-lg-12 mt-3">
+                                                   <input name="maxprice" type="text" className="w-100 px-2" placeholder="Max Price $" />
+                                                </div>
+                                                <div className="col-lg-12 my-2">
+                                                   <input name="minprice" type="text" className="w-100 px-2" placeholder="Min Price $" />
+                                                </div>
+                                                <div className="col-lg-12 my-2">
+                                                   <button className="btn btn-dark text-uppercase harvee-btn-filter py-0">
+                                                      filter</button>
+                                                </div>
+                                             </div>
                                           </div>
                                        </div>
-                                    </div>
-                                 </div>
-                              </div>
+                                    </CardBody>
+                                 </Card>
+                              </UncontrolledCollapse>
                            </div>
-                        </div>
-                        <div id="accordion-3" className="harvee-accordion">
-                           <div className="card">
-                              <div className="card-header mt-2" id="size">
-                                 <h5 className="mb-0 line">
-                                    <button className="btn text-uppercase font-weight-bold collapsed py-4" data-toggle="collapse" data-target="#collapseSize" aria-expanded="false" aria-controls="collapseSize">
-                                       size
-                         </button>
-                                 </h5>
-                              </div>
-                              <div id="collapseSize" className="collapse line" aria-labelledby="size" data-parent="#accordion-3">
-                                 <div className="card-body mt-2">
-                                    <div className="container">
-                                       <div className="row">
-                                          <div className="col-lg-12 my-2 text-center">
-                                             <button className="btn btn-dark text-uppercase harvee-btn-filter py-0">
-                                                S
-                               </button>
-                                             <button className="btn btn-dark text-uppercase harvee-btn-filter py-0">
-                                                M
-                               </button>
-                                             <button className="btn btn-dark text-uppercase harvee-btn-filter py-0">
-                                                L
-                               </button>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div id="accordion-5" className="harvee-accordion">
-                           <div className="card">
-                              <div className="card-header mt-2" id="color">
-                                 <h5 className="mb-0 line">
-                                    <button className="btn text-uppercase font-weight-bold collapsed py-4" data-toggle="collapse" data-target="#collapseColor" aria-expanded="false" aria-controls="collapseColor">
-                                       Color
-                         </button>
-                                 </h5>
-                              </div>
-                              <div id="collapseColor" className="collapse line" aria-labelledby="color" data-parent="#accordion-5">
-                                 <div className="card-body text-center">
-                                    <button className="btn btn-primary text-uppercase harvee-btn-filter p-3 m-2" />
-                                    <button className="btn btn-dark text-uppercase harvee-btn-filter p-3 m-2" />
-                                    <button className="btn btn-success text-uppercase harvee-btn-filter p-3 m-2" />
-                                    <button className="btn btn-warning text-uppercase harvee-btn-filter p-3 m-2" />
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div className="harvee-category-carousel my-4 ">
-                        <div className="container">
-                           <h5 className="text-uppercase">
-                              features product
-                   </h5>
-                           {/* <div class="owl-carousel owl-theme">
-                             <div class="item">
-                                 @include('components.product-card')
-                             </div>
-                             <div class="item">
-                                 @include('components.product-card')
-                             </div>
-                             <div class="item">
-                                 @include('components.product-card')
-                             </div>
-                         </div> */}
                         </div>
                      </div>
                   </div>
                   <div className="col-lg-9">
                      <div className="col-lg-12">
-                        <div className="harvee-banner mb-4" style={{ backgroundImage: 'url("{{ asset("storage/images/iw.jpg")}}")' }}>
+                        <div className="harvee-banner mb-4" style={{ backgroundImage:`url(${watch})` }}>
                            <div className="container h-100">
                               <div className="row harvee-banner-shadow h-100">
                                  <div className="col-lg-12 my-auto">
