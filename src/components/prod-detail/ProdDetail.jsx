@@ -20,8 +20,8 @@ class ProdDetail extends Component {
                                                 </div>
                                                 <div className="mySlides tile" data-scale="1.8" data-image="{{asset('storage/images/m3.jpg')}}">
                                                 </div>
-                                                <a className="prev" onclick="plusSlides(-1)">❮</a>
-                                                <a className="next" onclick="plusSlides(1)">❯</a>
+                                                {/* <a className="prev" onclick="plusSlides(-1)">❮</a>
+                                                <a className="next" onclick="plusSlides(1)">❯</a> */}
                                                 <div className="caption-container">
                                                     <p id="caption" />
                                                 </div>
