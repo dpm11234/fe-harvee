@@ -5,6 +5,7 @@ import Contact from '../../pages/contact/Contact';
 import Footer from '../../components/footer/Footer';
 import Categories from '../../pages/categories/Categories';
 import Navbar from '../../components/navbar/Navbar';
+import ProdDetail from '../../components/prod-detail/ProdDetail';
 
 class AppClient extends Component {
    render() {
@@ -16,6 +17,7 @@ class AppClient extends Component {
             <Route path="/home" component={Home}/>
             <Route path="/contact" component={Contact} />
             <Route path="/category" component={Categories} />
+            <Route path="/detail" component={ProdDetail} />
 
             <Footer />
          </div>
