@@ -76,14 +76,14 @@ class Navbar extends Component {
                 </div>
                 <div className="col-lg-2 text-uppercase text-center">
                   <a href="/category" id="cate-1" className="nav-link ">Category
-                  <i className="fa fa-angle-down" />
+                 
                   </a>
                   <div id="cate-detail-1" className="harvee-category-detail">
                   </div>
                 </div>
                 <div className="col-lg-2 text-uppercase text-center">
                   <a id="cate-2" className="nav-link ">Product
-                  <i className="fa fa-angle-down" />
+                 
                   </a>
                   <div id="cate-detail-2" className="harvee-category-detail">
                   </div>
@@ -117,14 +117,14 @@ class Navbar extends Component {
               </div>
               <div className="col-auto  text-uppercase text-center">
                 <a id="cate-scroll-1" className="nav-link mt-2 ">Category
-                <i className="fa fa-angle-down" />
+               
                 </a>
                 <div id="cate-detail-scroll-1" className="harvee-category-detail">
                 </div>
               </div>
               <div className="col-auto  text-uppercase text-center">
                 <a id="cate-scroll-2" className="nav-link mt-2 ">Product
-                <i className="fa fa-angle-down" />
+               
                 </a>
                 <div id="cate-detail-scroll-2" className="harvee-category-detail">
                 </div>

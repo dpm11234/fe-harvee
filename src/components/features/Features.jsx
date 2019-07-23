@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import workImg from '../../assets/images/work.jpg';
+import './Features.scss';
+
+
 
 class Features extends Component {
     render() {
@@ -13,7 +17,7 @@ class Features extends Component {
                                         <div className="container-fluid">
                                             <div className="row">
                                                 <div className="col-lg-2 col-3">
-                                                    <i className="fa fa-star harvee-feature-icon" />
+                                                    <i className="far fa-stars harvee-feature-icon" />
                                                 </div>
                                                 <div className="col-lg-10 col-9">
                                                     <h4 className="font-weight-bold text-uppercase">
@@ -33,7 +37,7 @@ class Features extends Component {
                                         <div className="container-fluid">
                                             <div className="row">
                                                 <div className="col-lg-2 col-3">
-                                                    <i className="fa fa-backward harvee-feature-icon" />
+                                                    <i className="far fa-backward harvee-feature-icon" />
                                                 </div>
                                                 <div className="col-lg-10 col-9">
                                                     <h4 className="font-weight-bold text-uppercase">
@@ -53,7 +57,7 @@ class Features extends Component {
                                         <div className="container-fluid">
                                             <div className="row">
                                                 <div className="col-lg-2 col-3">
-                                                    <i className="fa fa-paper-plane harvee-feature-icon" />
+                                                    <i className="far fa-paper-plane harvee-feature-icon" />
                                                 </div>
                                                 <div className="col-lg-10 col-9">
                                                     <h4 className="font-weight-bold text-uppercase">
@@ -71,7 +75,7 @@ class Features extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="harvee-banner mb-4" style={{ backgroundImage: 'url("{{ asset("storage/images/gear.jpg")}}")' }}>
+                        <div className="harvee-banner mb-4" style={{ backgroundImage: `url(${workImg})` }}>
                             <div className="container h-100">
                                 <div className="row harvee-banner-shadow h-100">
                                     <div className="col-lg-12 my-auto text-center">
