@@ -72,33 +72,33 @@ class Navbar extends Component {
             <div id="non-scroll" className="container-fluid px-4 harvee-nav-link">
               <div className="row">
                 <div className="col-lg-2 text-uppercase text-center">
-                  <a href="/home" className="nav-link ">Home</a>
+                  <Link to="/home" className="nav-link ">Home</Link>
                 </div>
                 <div className="col-lg-2 text-uppercase text-center">
-                  <a href="/category" id="cate-1" className="nav-link ">Category
+                  <Link to="/category" id="cate-1" className="nav-link ">Category
                  
-                  </a>
+                  </Link>
                   <div id="cate-detail-1" className="harvee-category-detail">
                   </div>
                 </div>
                 <div className="col-lg-2 text-uppercase text-center">
-                  <a id="cate-2" className="nav-link ">Product
+                  <Link id="cate-2" className="nav-link ">Product
                  
-                  </a>
+                  </Link>
                   <div id="cate-detail-2" className="harvee-category-detail">
                   </div>
                 </div>
                 <div className="col-lg-2 text-uppercase text-center">
-                  <a href className="nav-link ">Payment
-                </a>
+                  <Link href className="nav-link ">Payment
+                </Link>
                 </div>
                 <div className="col-lg-2 text-uppercase text-center">
-                  <a href className="nav-link ">Shipment
-                </a>
+                  <Link href className="nav-link ">Shipment
+                </Link>
                 </div>
                 <div className="col-lg-2 text-uppercase text-center">
-                  <a href="contact" className="nav-link ">Contact
-                </a>
+                  <Link to="contact" className="nav-link ">Contact
+                </Link>
                 </div>
               </div>
             </div>
@@ -108,38 +108,38 @@ class Navbar extends Component {
           <div id="nav-scroll" className="container-fluid px-4 harvee-nav-link harvee-navbar-scroll d-none d-sm-block">
             <div className="row">
               <div className="col-auto text-center m-1">
-                <a href="home">
-                  <img className="harvee-logo-scroll" src={logo} alt />
-                </a>
+                <Link to="home">
+                  <img className="harvee-logo-scroll" src={logo} alt="abc" />
+                </Link>
               </div>
               <div className="col-auto  text-uppercase text-center">
-                <a href="/home" className="nav-link mt-2 ">Home</a>
+                <Link to="/home" className="nav-link mt-2 ">Home</Link>
               </div>
               <div className="col-auto  text-uppercase text-center">
-                <a id="cate-scroll-1" className="nav-link mt-2 ">Category
+                <Link to="/category" id="cate-scroll-1" className="nav-link mt-2 ">Category
                
-                </a>
+                </Link>
                 <div id="cate-detail-scroll-1" className="harvee-category-detail">
                 </div>
               </div>
               <div className="col-auto  text-uppercase text-center">
-                <a id="cate-scroll-2" className="nav-link mt-2 ">Product
+                <Link id="cate-scroll-2" className="nav-link mt-2 ">Product
                
-                </a>
+                </Link>
                 <div id="cate-detail-scroll-2" className="harvee-category-detail">
                 </div>
               </div>
               <div className="col-auto  text-uppercase text-center">
-                <a href className="nav-link mt-2 ">Payment
-              </a>
+                <Link href className="nav-link mt-2 ">Payment
+              </Link>
               </div>
               <div className="col-auto  text-uppercase text-center">
-                <a href className="nav-link mt-2 ">Shipment
-              </a>
+                <Link href className="nav-link mt-2 ">Shipment
+              </Link>
               </div>
               <div className="col-auto  text-uppercase text-center">
-                <a href="contact" className="nav-link mt-2 ">Contact
-              </a>
+                <Link to="contact" className="nav-link mt-2 ">Contact
+              </Link>
               </div>
               <div className="col-3 text-right">
                 <button id="my-cart-2" className="btn btn-harvee">
@@ -158,9 +158,9 @@ class Navbar extends Component {
             </div>
           </div>
           <nav className="navbar navbar-expand-sm harvee-nav-mobile d-block d-sm-none w-100">
-            <a className="navbar-brand" href="/home">
-              <img className="harvee-logo-scroll" src="{{asset('storage/images/logo.png')}}" alt />
-            </a>
+            <Link className="navbar-brand" to="/home">
+              <img className="harvee-logo-scroll" src="{{asset('storage/images/logo.png')}}" alt="abc" />
+            </Link>
             <button className="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon my-1" />
               <span className="navbar-toggler-icon my-1" />
@@ -169,34 +169,34 @@ class Navbar extends Component {
             <div className="collapse navbar-collapse" id="navbarsExample03">
               <ul className="navbar-nav mr-auto harvee-nav-link p-2">
                 <li className="nav-item active">
-                  <a className="nav-link" href="/home">Home</a>
+                  <Link className="nav-link" to="/home">Home</Link>
                 </li>
                 <li className="nav-item dropdown">
-                  <a className="nav-link dropdown-toggle" href="http://example.com" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category
-                </a>
+                  <Link className="nav-link dropdown-toggle" to="http://example.com" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category
+                </Link>
                   <div className="dropdown-menu" aria-labelledby="dropdown03">
-                    <a className="dropdown-item" href="#">Action</a>
-                    <a className="dropdown-item" href="#">Another action</a>
-                    <a className="dropdown-item" href="#">Something else here</a>
+                    <Link className="dropdown-item" to="#">Action</Link>
+                    <Link className="dropdown-item" to="#">Another action</Link>
+                    <Link className="dropdown-item" to="#">Something else here</Link>
                   </div>
                 </li>
                 <li className="nav-item dropdown">
-                  <a className="nav-link dropdown-toggle" href="http://example.com" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Product
-                </a>
+                  <Link className="nav-link dropdown-toggle" to="http://example.com" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Product
+                </Link>
                   <div className="dropdown-menu" aria-labelledby="dropdown04">
-                    <a className="dropdown-item" href="#">Action</a>
-                    <a className="dropdown-item" href="#">Another action</a>
-                    <a className="dropdown-item" href="#">Something else here</a>
+                    <Link className="dropdown-item" to="#">Action</Link>
+                    <Link className="dropdown-item" to="#">Another action</Link>
+                    <Link className="dropdown-item" to="#">Something else here</Link>
                   </div>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Payment</a>
+                  <Link className="nav-link" to="#">Payment</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Shipment</a>
+                  <Link className="nav-link" to="#">Shipment</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/contact">Contact</a>
+                  <Link className="nav-link" to="/contact">Contact</Link>
                 </li>
               </ul>
               <form className="form-inline my-2 my-md-0">
