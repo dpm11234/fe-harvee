@@ -2,27 +2,38 @@ import React, { Component } from 'react';
 import ItemsCarousel from 'react-items-carousel';
 import range from 'lodash/range';
 import ProdCard from '../prod-card/ProdCard';
+import axios from "axios";
 
 
 
 class ListProduct extends Component {
-    componentWillMount() {
-        this.setState({
+    constructor(props) {
+        super(props);
+        this.state = {
             children: [],
             activeItemIndex: 0,
-        });
-
-        setTimeout(() => {
+        }
+    }
+    componentWillMount() {
+        axios.get('http://localhost:8000/api/products?type=su').then(({data}) => {
+            // console.log(data);
             this.setState({
-                children: this.createChildren(6)
-                //truyen mang du lieu list prod vao creat children
+                children: this.createChildren(data.products),
             })
-        }, 100);
+        })
+
+
+        // setTimeout(() => {
+        //     this.setState({
+        //         children: this.createChildren(6)
+        //         //truyen mang du lieu list prod vao creat children
+        //     })
+        // }, 100);
     }
 
-    createChildren = n => range(n).map(i =>
-        <div key={i}>
-            <ProdCard product={this.props.product} />
+    createChildren = products => products.map((product, i) =>
+        <div key={product.id}>
+            <ProdCard product={product} />
         </div>);
 
     changeActiveItem = (activeItemIndex) => this.setState({ activeItemIndex });

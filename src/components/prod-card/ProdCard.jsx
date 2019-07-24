@@ -9,7 +9,7 @@ class ProdCard extends Component {
                     <div className="row">
                         <div className="card">
                             <div className="card-header harvee-card-header">
-                                <img src={this.props.product} alt="" />
+                                <img src={this.props.product.thumbnail} alt="" />
                                 <div className="harvee-card-view">
                                     <p className="text-center text-white text-uppercase pt-3">
                                         quick view
@@ -27,15 +27,15 @@ class ProdCard extends Component {
                                 <div className="col-lg-12">
                                     <h4 className="harvee-card-prod-name text-center">
                                         <a href="category/product-detail">
-                                            Sony AZ370-PRL
+                                           {this.props.product.name}
               </a>
                                     </h4>
                                     <p className="harvee-card-prod-price text-center">
                                         <span className="harvee-old-price ">
-                                            $500.50
+                                        {this.props.product.price}
               </span>
                                         <span className="harvee-sale-price font-weight-bold ml-2">
-                                            $250.00
+                                        {this.props.product.discPrice}
               </span>
                                     </p>
                                 </div>
