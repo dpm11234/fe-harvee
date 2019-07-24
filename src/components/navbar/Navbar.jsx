@@ -82,18 +82,18 @@ class Navbar extends Component {
                   </div>
                 </div>
                 <div className="col-lg-2 text-uppercase text-center">
-                  <Link id="cate-2" className="nav-link ">Product
+                  <Link to="/products" id="cate-2" className="nav-link ">Product
                  
                   </Link>
                   <div id="cate-detail-2" className="harvee-category-detail">
                   </div>
                 </div>
                 <div className="col-lg-2 text-uppercase text-center">
-                  <Link href className="nav-link ">Payment
+                  <Link to="/asf" className="nav-link ">Payment
                 </Link>
                 </div>
                 <div className="col-lg-2 text-uppercase text-center">
-                  <Link href className="nav-link ">Shipment
+                  <Link to="" className="nav-link ">Shipment
                 </Link>
                 </div>
                 <div className="col-lg-2 text-uppercase text-center">
@@ -123,18 +123,18 @@ class Navbar extends Component {
                 </div>
               </div>
               <div className="col-auto  text-uppercase text-center">
-                <Link id="cate-scroll-2" className="nav-link mt-2 ">Product
+                <Link to="" id="cate-scroll-2" className="nav-link mt-2 ">Product
                
                 </Link>
                 <div id="cate-detail-scroll-2" className="harvee-category-detail">
                 </div>
               </div>
               <div className="col-auto  text-uppercase text-center">
-                <Link href className="nav-link mt-2 ">Payment
+                <Link to="adsasd" className="nav-link mt-2 ">Payment
               </Link>
               </div>
               <div className="col-auto  text-uppercase text-center">
-                <Link href className="nav-link mt-2 ">Shipment
+                <Link to="sadfsdf" className="nav-link mt-2 ">Shipment
               </Link>
               </div>
               <div className="col-auto  text-uppercase text-center">

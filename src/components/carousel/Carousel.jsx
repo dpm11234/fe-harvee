@@ -114,7 +114,7 @@ class CarouselComponet extends Component {
                                     <div className="container-fluid">
                                         <div className="row">
                                             <div className="col-lg-2 col-3 harvee-icon">
-                                            <i class="far fa-shipping-fast"></i>
+                                            <i className="far fa-shipping-fast"></i>
                                             </div>
                                             <div className="col-lg-10 col-9">
                                                 <h5>
@@ -131,7 +131,7 @@ class CarouselComponet extends Component {
                                     <div className="container-fluid">
                                         <div className="row">
                                             <div className="col-lg-2 col-3 harvee-icon">
-                                            <i class="far fa-sack-dollar"></i>
+                                            <i className="far fa-sack-dollar"></i>
                                             </div>
                                             <div className="col-lg-10 col-9">
                                                 <h5>
