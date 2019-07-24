@@ -5,7 +5,9 @@ class ProdDetail extends Component {
     
     render() {
         return (
+            
             <div className="harvee-prod-detail">
+                
                 <div className="container mt-4 pt-4">
                     <div className="row">
                         <div className="col-lg-10">
