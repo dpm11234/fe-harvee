@@ -1,5 +1,9 @@
 .hv-login {
-  background: #9b9b9b;
+  background: #f4f4f2;
+
+  .harvee-logo {
+    width: 200px;
+  }
 
   .signin-section {
       border-right: #9b9b9b 1px solid;
@@ -7,6 +11,8 @@
 
   .login-form {
     background: white;
+    border: #9b9b9b solid 1px;
+    border-radius: 5px;
   }
 
   .remember-me {
@@ -17,6 +23,7 @@
   .input-checkbox {
     position: relative;
     top: 12px;
+    cursor: pointer;
   }
 
   .row-reverse {
