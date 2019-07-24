@@ -17,7 +17,7 @@ class Contact extends Component {
 
    render() {
       return (
-         <div className="harvee-contact mb-5">
+         <div className="harvee-contact mb-5 mt-4">
             <div className="container">
                <div className="row">
                   <div className="col-lg-7">
