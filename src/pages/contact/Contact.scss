@@ -1,0 +1,59 @@
+.harvee-contact {
+
+   h1 {
+      font-size: 24px;
+      span {
+         font-weight: bold;
+      }
+   }
+
+   label {
+      font-size: 16px;
+   }
+
+   .input {
+      max-width: 480px;
+      font-size: 16px;
+      padding: 15px;
+      box-shadow: unset;
+   }
+
+   textarea {
+      min-height: 176px;
+      max-width: 680px;
+      &:focus {
+         box-shadow: unset;
+      }
+   }
+
+   .btn-submit {
+      font-size: 16px;
+      padding: 8px 15px;
+      font-weight: bold;
+   }
+
+   .contact-info {
+      .icon {
+         display: flex;
+         width: 48px;
+         height: 48px;
+         background-color: #2B2B2D;
+         align-items: center;
+         i {
+            font-size: 16px;
+            margin: auto;
+            color: white;
+         }
+      }
+
+      a {
+         font-size: 15px;
+         color: #2B2B2D;
+         font-weight: 500;
+         letter-spacing: 1px;
+      }
+
+   }
+
+
+}

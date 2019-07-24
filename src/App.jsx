@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import AppClient from './layout/Client/AppClient';
 import AppAdmin from './layout/AppAdmin';
 
@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Route path="/" component={AppClient}/>
-        <Route path="/admin" component={AppAdmin}/>
+        <Route path="/" component={AppClient} />
+        <Route path="/admin" component={AppAdmin} />
 
       </Router>
     </div>
