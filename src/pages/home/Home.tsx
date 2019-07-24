@@ -12,7 +12,7 @@ class Home extends Component {
   render() {
     api.post('/login', {
 
-      'email': 'deoyellow2@gmail.com',
+      'email': 'deoyellow3@gmail.com',
       'password': 'password',
 
     }).then(({ data }) => {
@@ -21,15 +21,16 @@ class Home extends Component {
       api.defaults.headers.common['Authorization'] = a;
       console.log(a);
       api.post('/products/', {
-        "name": "Iphone 5gg",
-        "brand_id": "8",
-        "user_id": "1",
-        "slug": "iphone-5",
-        "price": "3866202.00",
-        "discount": "12",
-        "tag": "Phone",
-        "status": "1",
-        "intro": "Earum at quasi vitae est.",
+        "name": "Iphone 5",
+        "category_id": 2,
+          "brand_id": 8,
+          "user_id": 1,
+          "price": 3866202.00,
+          "thumbnail": "https://lorempixel.com/300/300/?51994",
+          "discount": 12,
+          "tag": "Phone",
+          "status": 1,
+          "intro": "Earum at quasi vitae est."
         // "review": "Et expedita ut nam quaerat aliquid consequuntur et",
       }).then(data => console.log(data))
 
