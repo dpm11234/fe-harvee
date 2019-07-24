@@ -1,11 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 import AppClient from './layout/Client/AppClient';
-import AppAdmin from './layout/AppAdmin';
+import AppAdmin from './layout/Admin/AppAdmin';
 import Home from './pages/home/Home';
 import Categories from './pages/categories/Categories';
 import Contact from './pages/contact/Contact';
-
+import ProdDetail from './components/prod-detail/ProdDetail';
+import Login from './pages/login/Login';
 
 function App() {
   return (
@@ -40,8 +41,16 @@ function App() {
             </AppClient>
           );
         }} />
+    
+        <Route exact path="/detail" render={() => {
+          return (
+            <AppClient>
+              <ProdDetail />
+            </AppClient>
+          );
+        }} />
 
-
+        <Route path="/login" component={Login} />
         <Route path="/admin" component={AppAdmin} />
 
       </Router>

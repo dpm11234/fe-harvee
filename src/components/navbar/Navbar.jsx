@@ -50,7 +50,7 @@ class Navbar extends Component {
                       </div>
                       <div className="col-lg-4 text-right">
                         <button id="my-cart" className="btn btn-harvee">
-                      <i className="far fa-shopping-cart harvee-cart"></i>
+                          <i className="far fa-shopping-cart harvee-cart"></i>
                         </button>
                         <div id="cart-detail" className="harvee-cart-detail">
                           <div className="container">
@@ -75,18 +75,8 @@ class Navbar extends Component {
                   <Link to="/home" className="nav-link ">Home</Link>
                 </div>
                 <div className="col-lg-2 text-uppercase text-center">
-                  <Link to="/category" id="cate-1" className="nav-link ">Category
-                 
+                  <Link to="/category" className="nav-link ">Category
                   </Link>
-                  <div id="cate-detail-1" className="harvee-category-detail">
-                  </div>
-                </div>
-                <div className="col-lg-2 text-uppercase text-center">
-                  <Link to="/products" id="cate-2" className="nav-link ">Product
-                 
-                  </Link>
-                  <div id="cate-detail-2" className="harvee-category-detail">
-                  </div>
                 </div>
                 <div className="col-lg-2 text-uppercase text-center">
                   <Link to="/asf" className="nav-link ">Payment
@@ -98,6 +88,10 @@ class Navbar extends Component {
                 </div>
                 <div className="col-lg-2 text-uppercase text-center">
                   <Link to="contact" className="nav-link ">Contact
+                </Link>
+                </div>
+                <div className="col-lg-2 text-uppercase text-center">
+                  <Link to="login" className="nav-link ">Login
                 </Link>
                 </div>
               </div>
@@ -117,17 +111,8 @@ class Navbar extends Component {
               </div>
               <div className="col-auto  text-uppercase text-center">
                 <Link to="/category" id="cate-scroll-1" className="nav-link mt-2 ">Category
-               
+
                 </Link>
-                <div id="cate-detail-scroll-1" className="harvee-category-detail">
-                </div>
-              </div>
-              <div className="col-auto  text-uppercase text-center">
-                <Link to="" id="cate-scroll-2" className="nav-link mt-2 ">Product
-               
-                </Link>
-                <div id="cate-detail-scroll-2" className="harvee-category-detail">
-                </div>
               </div>
               <div className="col-auto  text-uppercase text-center">
                 <Link to="adsasd" className="nav-link mt-2 ">Payment
@@ -141,9 +126,13 @@ class Navbar extends Component {
                 <Link to="contact" className="nav-link mt-2 ">Contact
               </Link>
               </div>
+              <div className="col-auto  text-uppercase text-center">
+                <Link to="login" className="nav-link mt-2 ">Login
+              </Link>
+              </div>
               <div className="col-3 text-right">
                 <button id="my-cart-2" className="btn btn-harvee">
-              <i className="far fa-shopping-cart harvee-cart"></i>
+                  <i className="far fa-shopping-cart harvee-cart"></i>
                 </button>
                 <div id="cart-detail-2" className="harvee-cart-detail">
                   <div className="container">

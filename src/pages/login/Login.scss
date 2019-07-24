@@ -1,0 +1,48 @@
+.hv-login {
+  background: #9b9b9b;
+
+  .signin-section {
+      border-right: #9b9b9b 1px solid;
+  }
+
+  .login-form {
+    background: white;
+  }
+
+  .remember-me {
+    position: relative;
+    top: 6px;
+  }
+
+  .input-checkbox {
+    position: relative;
+    top: 12px;
+  }
+
+  .row-reverse {
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: row-reverse; /* Safari 6.1+ */
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .social-login {
+      background: #f4f4f2;
+  }
+
+  .btn-twitter {
+      background: #1aa9e1;
+      color: white;
+  }
+
+  .btn-facebook {
+      color: white;
+      background: #3a589d;
+  }
+
+  .btn-danger,
+  .btn-facebook,
+  .btn-twitter {
+      width: 170px;
+  }
+}
