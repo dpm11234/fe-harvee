@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
 import './ProdDetail.scss';
+import TabGallery from '../tab-gallery/TabGallery';
+
+const imgUrls = [
+    'https://www.elinfor.com/article/1/-/1-3%203D%20QLC,%20MJX%20master%20and%201GB%20LPDDR4.jpg',
+    'https://images.samsung.com/is/image/samsung/ie-860-qvo-sata-3-2-5-ssd-mz-76q4t0bw-backblack-131389920?$PD_GALLERY_JPG$',
+    'https://www.techadvisor.co.uk/cmsdata/reviews/3689063/samsung_860_qvo_review_thumb800.jpg',
+    'https://1.bp.blogspot.com/-HzVb2lJ-A9o/XDrYOKHex9I/AAAAAAAAGr8/jOR76nU6essAikLI4EFo1XlqqiKPvG6vgCLcBGAs/s1600/03.jpg'
+]
 
 class ProdDetail extends Component {
-    
+
     render() {
         return (
-            
+
             <div className="harvee-prod-detail">
-                
+
                 <div className="container mt-4 pt-4">
                     <div className="row">
                         <div className="col-lg-10">
@@ -15,32 +23,7 @@ class ProdDetail extends Component {
                                 <div className="row">
                                     <div className="col-lg-7">
                                         <div className="harvee-tags-gallery mt-2">
-                                            <div className="container">
-                                                <div className="mySlides tile" data-scale="1.8" data-image="{{asset('storage/images/m1.jpg')}}">
-                                                </div>
-                                                <div className="mySlides tile" data-scale="1.8" data-image="{{asset('storage/images/m2.jpg')}}">
-                                                </div>
-                                                <div className="mySlides tile" data-scale="1.8" data-image="{{asset('storage/images/m3.jpg')}}">
-                                                </div>
-                                                {/* <a className="prev" onclick="plusSlides(-1)">❮</a>
-                                                <a className="next" onclick="plusSlides(1)">❯</a> */}
-                                                <div className="caption-container">
-                                                    <p id="caption" />
-                                                </div>
-                                                <div className="container mt-4" style={{ display: 'flex' }}>
-                                                    <div className="row">
-                                                        <div className="column m-1">
-                                                            <img className="demo cursor" src="{{asset('storage/images/m1.jpg')}}" style={{ width: '100%' }} onclick="currentSlide(1)" alt="" />
-                                                        </div>
-                                                        <div className="column m-1">
-                                                            <img className="demo cursor" src="{{asset('storage/images/m2.jpg')}}" style={{ width: '100%' }} onclick="currentSlide(2)" alt="" />
-                                                        </div>
-                                                        <div className="column m-1">
-                                                            <img className="demo cursor" src="{{asset('storage/images/m3.jpg')}}" style={{ width: '100%' }} onclick="currentSlide(3)" alt="" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <TabGallery imgUrl={imgUrls} />
                                         </div>
                                     </div>
                                     <div className="col-lg-5">
