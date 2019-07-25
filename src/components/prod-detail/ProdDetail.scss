@@ -1,5 +1,6 @@
 @import '../../scss/abstracts/variables';
 
+
 .harvee-prod-detail {
   .old-price {
     font-weight: bold;
@@ -96,7 +97,7 @@
 
     /* Hide the images by default */
     .mySlides {
-      height: 300px;
+      height: 370px;
       width: 100%;
       display: none;
 
@@ -104,109 +105,13 @@
         cursor: zoom-in;
       }
     }
-
-    /* Add a pointer when hovering over the thumbnail images */
-    .cursor {
-      cursor: pointer;
-    }
-
-    /* Next & previous buttons */
-    .prev,
-    .next {
-      cursor: pointer;
-      position: absolute;
-      top: 40%;
-      width: auto;
-      padding: 16px;
-      margin-top: -50px;
-      color: white;
-      font-weight: bold;
-      font-size: 20px;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
-      -webkit-user-select: none;
-
-      &:hover {
-        background-color: transparent !important;
-        color: black;
-      }
-    }
-
-    /* Position the "next button" to the right */
-    .next {
-      right: 15px;
-      border-radius: 3px 0 0 3px;
-    }
-
-    .prev {
-      left: 15px;
-    }
-
-    /* Number text (1/3 etc) */
-    .numbertext {
-      color: #f2f2f2;
-      font-size: 12px;
-      padding: 8px 12px;
-      position: absolute;
-      top: 0;
-    }
-
-    /* Container for image text */
-    .caption-container {
-      text-align: center;
-      background-color: #222;
-      padding: 2px 16px;
-      color: white;
-    }
-
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-
-    /* Six columns side by side */
-    .column {
-      float: left;
-      width: 16.66%;
-    }
-
-    /* Add a transparency effect for thumnbail images */
-    .demo {
-      opacity: 0.6;
-    }
-
-    .active,
-    .demo:hover {
-      opacity: 1;
-    }
   }
 
-  .tiles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .tile {
-    position: relative;
-    float: left;
-    width: 33.333%;
-    height: 100%;
-    overflow: hidden;
-  }
-
-  .photo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    transition: transform 0.5s ease-out;
+  .hv-tabs {
+    font-weight: bold;
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
+
