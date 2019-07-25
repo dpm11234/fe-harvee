@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './Navbar.scss';
 import logo from '../../assets/images/logo.png';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { logout } from '../../redux/actions/user';
 
 class Navbar extends Component {
 
@@ -91,8 +93,11 @@ class Navbar extends Component {
                 </Link>
                 </div>
                 <div className="col-lg-2 text-uppercase text-center">
-                  <Link to="login" className="nav-link ">Login
-                </Link>
+                  {
+                    this.props.user.loggedIn 
+                    ? <Link to="/" onClick={this.props.logout} className="nav-link ">Logout</Link>
+                    : <Link to="login" className="nav-link ">Login</Link> 
+                  }
                 </div>
               </div>
             </div>
@@ -200,4 +205,10 @@ class Navbar extends Component {
   }
 }
 
-export default Navbar;
+const mapStateToProps = (state) => {
+   return {
+      user: state.user
+   }
+}
+
+export default connect(mapStateToProps, { logout })(Navbar);

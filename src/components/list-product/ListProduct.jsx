@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ItemsCarousel from 'react-items-carousel';
 import range from 'lodash/range';
 import ProdCard from '../prod-card/ProdCard';
-import axios from "axios";
+import productService from '../../services/ProductService';
 
 
 
@@ -15,13 +15,19 @@ class ListProduct extends Component {
         }
     }
     componentWillMount() {
-        axios.get('http://localhost:8000/api/products?type=su').then(({data}) => {
-            // console.log(data);
-            this.setState({
-                children: this.createChildren(data.products),
-            })
-        })
+        // axios.get('http://localhost:8000/api/products?type=su').then(({data}) => {
+        //     // console.log(data);
+        //     this.setState({
+        //         children: this.createChildren(data.products),
+        //     })
+        // })
 
+        productService.getAll()
+            .then(products => {
+                this.setState({
+                    children: this.createChildren(products)
+                });
+            })
 
         // setTimeout(() => {
         //     this.setState({

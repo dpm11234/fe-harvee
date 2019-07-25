@@ -10,13 +10,26 @@ const login = (email, password) => {
          'token': data.token,
          'token_type': data.token_type
       }
-      console.log(user);
+      
       return user;
    }).catch(err => console.log(err));
 }
 
+const register = ({ name, email, password, password_confirmation }) => {
+   return api.post('/register', {
+      name,
+      email,
+      password,
+      password_confirmation
+   }).then(({data}) => {
+      console.log(data);
+      return data;
+   }).catch(err => console.log(err));
+}
+
 const userService = {
-   login
+   login,
+   register
 }
 
 export default userService;

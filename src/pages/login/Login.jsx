@@ -6,10 +6,9 @@ import Input from 'react-validation/build/input';
 import { isEmail, isEmpty } from 'validator';
 import { connect } from 'react-redux';
 
-
 import './Login.scss';
 import logo from '../../assets/images/logo.png';
-import { login } from '../../redux/actions/user';
+import { login, register } from '../../redux/actions/user';
 
 const required = (value) => {
   if (isEmpty(value)) {
@@ -34,26 +33,35 @@ class Login extends Component {
     super(props);
 
     this.state = {
-      email: 'deoyellow1@gmail.com',
-      password: 'password',
+      name: 'duong mau',
+      email: '',
+      password: '',
+      password_confirmation: ''
     }
   }
-
-  componentDidMount() {
-    
-    const {loggedIn} = this.props.user;
-    if(loggedIn) {
-      this.props.history.push('/home')
-    }
-
-  }
-
 
   onSubmit = (e) => {
     e.preventDefault();
 
-    this.props.login(this.state.email, this.state.password);
+    this.props.login(this.state.email, this.state.password, this.props.history);
   }
+
+  onSubmitRegister = (e) => {
+    e.preventDefault();
+    this.setState({
+      password_confirmation: this.state.password
+    }, () => {
+      this.props.register(this.state, this.props.history);
+    })
+
+
+  }
+
+  onChange = (e) => {
+		this.setState({
+      [e.target.name]: e.target.value,
+    });
+	}
 
   render() {
     return (
@@ -84,11 +92,19 @@ class Login extends Component {
                               type="text" 
                               name="email" 
                               validations={[required, email]}
+                              value={this.state.email}
+                              onChange={this.onChange}
                           />
                         </div>
                         <div className="login-password mt-3">
                           <label htmlFor="password">Password <span style={{ color: 'red' }}>*</span></label>
-                          <input className="w-100 p-2 input-text form-control" type="password" name="password" />
+                          <Input 
+                            className="w-100 p-2 input-text form-control" 
+                            type="password" 
+                            name="password" 
+                            value={this.state.password}
+                            onChange={this.onChange}
+                          />
                         </div>
 
                         <div className="container">
@@ -109,7 +125,7 @@ class Login extends Component {
                     </div>
 
                     <div className="col-lg-6 my-4 p-4 register-section">
-                      <form action="">
+                      <Form onSubmit={this.onSubmitRegister}>
                         <h4 className="text-uppercase font-weight-bold">
                           register
                                                 </h4>
@@ -117,12 +133,24 @@ class Login extends Component {
                           No Account? Sign Up Here
                                                 </p>
                         <div className="login-email mt-3">
-                          <label htmlFor="emailRegister">Email Address <span style={{ color: 'red' }}>*</span></label>
-                          <input className="w-100 p-2 input-text form-control" type="text" name="emailRegister" />
+                          <label htmlFor="email">Email Address <span style={{ color: 'red' }}>*</span></label>
+                          <Input 
+                            className="w-100 p-2 input-text form-control" 
+                            type="text" 
+                            name="email"
+                            value={this.state.email}
+                            onChange={this.onChange}
+                           />
                         </div>
                         <div className="login-password mt-3">
-                          <label htmlFor="passwordRegister">Password <span style={{ color: 'red' }}>*</span></label>
-                          <input className="w-100 p-2 input-text form-control" type="password" name="passwordRegister" />
+                          <label htmlFor="password">Password <span style={{ color: 'red' }}>*</span></label>
+                          <Input 
+                            className="w-100 p-2 input-text form-control" 
+                            type="password" 
+                            name="password"
+                            value={this.state.password}
+                            onChange={this.onChange}
+                           />
                         </div>
 
                         <div className="container">
@@ -136,7 +164,7 @@ class Login extends Component {
                             </div>
                           </div>
                         </div>
-                      </form>
+                      </Form>
                     </div>
 
                     <div className="col-lg-12 p-4 social-login">
@@ -183,4 +211,4 @@ class Login extends Component {
   }
 }
 
-export default connect(mapStateToProps, { login })(Login);
+export default connect(mapStateToProps, { login, register })(Login);
