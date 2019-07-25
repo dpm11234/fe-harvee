@@ -4,8 +4,8 @@ import logo from '../../assets/images/logo.png';
 import { Link } from 'react-router-dom';
 import Form from 'react-validation/build/form';
 import Input from 'react-validation/build/input';
-import CheckButton from 'react-validation/build/button';
 import { isEmail, isEmpty } from 'validator';
+import ReCAPTCHA from "react-google-recaptcha";
 
 const required = (value) => {
   if (isEmpty(value)) {
@@ -15,10 +15,11 @@ const required = (value) => {
 
 const email = (value) => {
   if (!isEmail(value)) {
-      return <small className="form-text text-danger">Invalid email format</small>;
+    return <small className="form-text text-danger">Invalid email format</small>;
   }
 }
 
+const recaptchaRef = React.createRef();
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -29,7 +30,18 @@ class Login extends Component {
     }
   }
 
+
+  onSubmit = () => {
+    const recaptchaValue = recaptchaRef.current.getValue();
+    this.props.onSubmit(recaptchaValue);
+  }
+  
+
   render() {
+    function onChange(value) {
+      console.log("Captcha value:", value);
+    }
+
     return (
       <div className="hv-login">
         <div className="container h-100">
@@ -53,11 +65,11 @@ class Login extends Component {
                                                 </p>
                         <div className="login-email mt-3">
                           <label htmlFor="email">Email Address <span style={{ color: 'red' }}>*</span></label>
-                          <Input 
-                              className="w-100 p-2 input-text form-control" 
-                              type="text" 
-                              name="email" 
-                              validations={[required, email]}
+                          <Input
+                            className="w-100 p-2 input-text form-control"
+                            type="text"
+                            name="email"
+                            validations={[required, email]}
                           />
                         </div>
                         <div className="login-password mt-3">
@@ -83,7 +95,7 @@ class Login extends Component {
                     </div>
 
                     <div className="col-lg-6 my-4 p-4 register-section">
-                      <form action="">
+                      <form onSubmit={this.onSubmit}>
                         <h4 className="text-uppercase font-weight-bold">
                           register
                                                 </h4>
@@ -97,6 +109,19 @@ class Login extends Component {
                         <div className="login-password mt-3">
                           <label htmlFor="passwordRegister">Password <span style={{ color: 'red' }}>*</span></label>
                           <input className="w-100 p-2 input-text form-control" type="password" name="passwordRegister" />
+                        </div>
+
+                        <div className="login-password mt-3">
+                          <label htmlFor="passwordRegisterConfirm">Confirm Password <span style={{ color: 'red' }}>*</span></label>
+                          <input className="w-100 p-2 input-text form-control" type="password" name="passwordRegisterConfirm" />
+                        </div>
+
+                        <div className="captcha mt-4">
+                          <ReCAPTCHA
+                            ref={recaptchaRef}
+                            sitekey="Your client site key"
+                            onChange={onChange}
+                          />
                         </div>
 
                         <div className="container">

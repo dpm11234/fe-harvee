@@ -49,20 +49,12 @@ class Navbar extends Component {
                         <h4 className="font-weight-bold">+8465 469 403</h4>
                       </div>
                       <div className="col-lg-4 text-right">
-                        <button id="my-cart" className="btn btn-harvee">
-                          <i className="far fa-shopping-cart harvee-cart"></i>
-                        </button>
-                        <div id="cart-detail" className="harvee-cart-detail">
-                          <div className="container">
-                            <div className="row">
-                              <a href="/my-cart">
-                                <button className="btn btn-success w-100 m-2">
-                                  Check-out!
-                              </button>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
+                        <Link to="/my-cart">
+                          <button id="my-cart" className="btn btn-harvee">
+                            <i className="far fa-shopping-cart harvee-cart"></i>
+                          </button>
+                        </Link>
+
                       </div>
                     </div>
                   </div>
@@ -131,17 +123,12 @@ class Navbar extends Component {
               </Link>
               </div>
               <div className="col-3 text-right">
-                <button id="my-cart-2" className="btn btn-harvee">
-                  <i className="far fa-shopping-cart harvee-cart"></i>
-                </button>
+                <Link to="/my-cart">
+                  <button id="my-cart" className="btn btn-harvee">
+                    <i className="far fa-shopping-cart harvee-cart"></i>
+                  </button>
+                </Link>
                 <div id="cart-detail-2" className="harvee-cart-detail">
-                  <div className="container">
-                    <div className="row">
-                      <button className="btn btn-success w-100">
-                        Check-out!
-                    </button>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
