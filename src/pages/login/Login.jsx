@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom';
 import Form from 'react-validation/build/form';
 import Input from 'react-validation/build/input';
 // import CheckButton from 'react-validation/build/button';
-import { isEmail, isEmpty } from 'validator';
 import { connect } from 'react-redux';
 
 import './Login.scss';
 import logo from '../../assets/images/logo.png';
 import { login, register } from '../../redux/actions/user';
+import { isEmail, isEmpty } from 'validator';
+import ReCAPTCHA from "react-google-recaptcha";
 
 const required = (value) => {
   if (isEmpty(value)) {
@@ -18,7 +19,7 @@ const required = (value) => {
 
 const email = (value) => {
   if (!isEmail(value)) {
-      return <small className="form-text text-danger">Invalid email format</small>;
+    return <small className="form-text text-danger">Invalid email format</small>;
   }
 }
 
@@ -28,6 +29,7 @@ const mapStateToProps = (state) => {
   }
 }
 
+const recaptchaRef = React.createRef();
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -40,11 +42,11 @@ class Login extends Component {
     }
   }
 
-  onSubmit = (e) => {
-    e.preventDefault();
+  // onSubmit = (e) => {
+  //   e.preventDefault();
 
-    this.props.login(this.state.email, this.state.password, this.props.history);
-  }
+  //   this.props.login(this.state.email, this.state.password, this.props.history);
+  // }
 
   onSubmitRegister = (e) => {
     e.preventDefault();
@@ -63,7 +65,17 @@ class Login extends Component {
     });
 	}
 
+  onSubmit = () => {
+    const recaptchaValue = recaptchaRef.current.getValue();
+    this.props.onSubmit(recaptchaValue);
+  }
+  
+
   render() {
+    function onChange(value) {
+      console.log("Captcha value:", value);
+    }
+
     return (
       <div className="hv-login">
         <div className="container h-100">
@@ -151,6 +163,19 @@ class Login extends Component {
                             value={this.state.password}
                             onChange={this.onChange}
                            />
+                        </div>
+
+                        <div className="login-password mt-3">
+                          <label htmlFor="passwordRegisterConfirm">Confirm Password <span style={{ color: 'red' }}>*</span></label>
+                          <input className="w-100 p-2 input-text form-control" type="password" name="passwordRegisterConfirm" />
+                        </div>
+
+                        <div className="captcha mt-4">
+                          <ReCAPTCHA
+                            ref={recaptchaRef}
+                            sitekey="Your client site key"
+                            onChange={onChange}
+                          />
                         </div>
 
                         <div className="container">

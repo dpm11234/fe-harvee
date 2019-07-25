@@ -7,6 +7,7 @@ import Categories from './pages/categories/Categories';
 import Contact from './pages/contact/Contact';
 import ProdDetail from './components/prod-detail/ProdDetail';
 import Login from './pages/login/Login';
+import MyCart from './pages/my-cart/MyCart';
 
 function App() {
   return (
@@ -46,6 +47,14 @@ function App() {
           return (
             <AppClient>
               <ProdDetail />
+            </AppClient>
+          );
+        }} />
+
+        <Route exact path="/my-cart" render={() => {
+          return (
+            <AppClient>
+              <MyCart />
             </AppClient>
           );
         }} />
