@@ -135,7 +135,7 @@ class Navbar extends Component {
           </div>
           <nav className="navbar navbar-expand-sm harvee-nav-mobile d-block d-sm-none w-100">
             <Link className="navbar-brand" to="/home">
-              <img className="harvee-logo-scroll" src="{{asset('storage/images/logo.png')}}" alt="abc" />
+              <img className="harvee-logo-scroll"  alt="abc" />
             </Link>
             <button className="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon my-1" />
