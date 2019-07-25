@@ -31,19 +31,19 @@ class Sidebar extends Component {
                                     <ul className="nav flex-column">
                                         <li className="nav-item">
                                             <a className="nav-link" href="#">
-                                                <span data-feather="home" />
+                                            <i class="far fa-home mr-2"></i>
                                                 Dashboard
                                             </a>
                                         </li>
                                         <li className="nav-item">
                                             <a className="nav-link" href="#">
-                                                <span data-feather="file" />
+                                            <i class="far fa-poll-h mr-2"></i>
                                                 Orders
               </a>
                                         </li>
                                         <li className="nav-item">
                                             <a className="nav-link" href="#">
-                                                <span data-feather="shopping-cart" />
+                                            <i class="far fa-swatchbook mr-2"></i>
                                                 Products
               </a>
                                         </li>
