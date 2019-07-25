@@ -106,5 +106,12 @@
       }
     }
   }
+
+  .hv-tabs {
+    font-weight: bold;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
