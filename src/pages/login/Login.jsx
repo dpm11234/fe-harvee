@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
-import './Login.scss';
-import logo from '../../assets/images/logo.png';
 import { Link } from 'react-router-dom';
 import Form from 'react-validation/build/form';
 import Input from 'react-validation/build/input';
-import CheckButton from 'react-validation/build/button';
+// import CheckButton from 'react-validation/build/button';
 import { isEmail, isEmpty } from 'validator';
+import { connect } from 'react-redux';
+
+
+import './Login.scss';
+import logo from '../../assets/images/logo.png';
+import { login } from '../../redux/actions/user';
 
 const required = (value) => {
   if (isEmpty(value)) {
@@ -19,14 +23,36 @@ const email = (value) => {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    user: state.user
+  }
+}
+
 class Login extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      email: '',
-      password: '',
+      email: 'deoyellow1@gmail.com',
+      password: 'password',
     }
+  }
+
+  componentDidMount() {
+    
+    const {loggedIn} = this.props.user;
+    if(loggedIn) {
+      this.props.history.push('/home')
+    }
+
+  }
+
+
+  onSubmit = (e) => {
+    e.preventDefault();
+
+    this.props.login(this.state.email, this.state.password);
   }
 
   render() {
@@ -44,10 +70,10 @@ class Login extends Component {
                 <div className="container">
                   <div className="row">
                     <div className="col-lg-6 my-4 p-4 signin-section">
-                      <Form action="">
+                      <Form onSubmit={this.onSubmit}>
                         <h4 className="text-uppercase font-weight-bold">
                           login
-                                                </h4>
+                        </h4>
                         <p>
                           Already has an account! Sign In Here
                                                 </p>
@@ -157,4 +183,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default connect(mapStateToProps, { login })(Login);

@@ -50,7 +50,7 @@ function App() {
           );
         }} />
 
-        <Route path="/login" component={Login} />
+        <Route path="/login" render={({ history }) => <Login history={history}/>} />
         <Route path="/admin" component={AppAdmin} />
 
       </Router>
