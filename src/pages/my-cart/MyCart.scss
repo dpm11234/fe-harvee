@@ -1,0 +1,18 @@
+@import "../../scss/abstracts/variables";
+
+.harvee-summary {
+    .btn-add-infor {
+        background: transparent;
+        color: black;
+        border: none;
+
+        &:focus,
+        &:active,
+        &:hover {
+            background-color: transparent !important;
+            color: black !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+    }
+}
