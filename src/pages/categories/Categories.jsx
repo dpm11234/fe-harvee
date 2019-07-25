@@ -18,9 +18,7 @@ class Categories extends Component {
                                     <Button
                                        className="w-100 text-left font-weight-bold p-4 btn-collapse"
                                        id="togglerType"
-                                    >
-                                       TYPE
-                        </Button>
+                                    >TYPE</Button>
                                  </h5>
                               </div>
                               <UncontrolledCollapse toggler="#togglerType">
@@ -46,9 +44,7 @@ class Categories extends Component {
                                     <Button
                                        className="w-100 text-left font-weight-bold p-4 btn-collapse"
                                        id="togglerBrand"
-                                    >
-                                       BRAND
-                        </Button>
+                                    >BRAND</Button>
                                  </h5>
                               </div>
                               <UncontrolledCollapse toggler="#togglerBrand">
@@ -69,9 +65,7 @@ class Categories extends Component {
                                     <Button
                                        className="w-100 text-left font-weight-bold p-4 btn-collapse"
                                        id="togglerPrice"
-                                    >
-                                       PRICE
-                        </Button>
+                                    >PRICE</Button>
                                  </h5>
                               </div>
                               <UncontrolledCollapse toggler="#togglerPrice">
@@ -97,9 +91,7 @@ class Categories extends Component {
                                                    />
                                                 </div>
                                                 <div className="col-lg-12 my-2">
-                                                   <button className="btn btn-dark harvee-btn-filter py-0">
-                                                      FILTER
-                                  </button>
+                                                   <button className="btn btn-dark harvee-btn-filter py-0">FILTER</button>
                                                 </div>
                                              </div>
                                           </div>
@@ -120,15 +112,9 @@ class Categories extends Component {
                            <div className="container h-100">
                               <div className="row harvee-banner-shadow h-100">
                                  <div className="col-lg-12 my-auto">
-                                    <h1 className="text-uppercase font-weight-bold">
-                                       CHECK OUT OVER 200+
-                        </h1>
-                                    <h2 className="text-uppercase">
-                                       COASTS &amp; JACKETS FOR WOMAN
-                        </h2>
-                                    <button className="btn text-uppercase harvee-feature-btn font-weight-bold px-4 my-4">
-                                       shop now
-                        </button>
+                                    <h1 className="text-uppercase font-weight-bold">CHECK OUT OVER 200+</h1>
+                                    <h2 className="text-uppercase">COASTS &amp; JACKETS FOR WOMAN</h2>
+                                    <button className="btn harvee-feature-btn font-weight-bold px-4 my-4">SHOP NOW</button>
                                  </div>
                               </div>
                            </div>
