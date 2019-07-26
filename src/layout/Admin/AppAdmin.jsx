@@ -4,7 +4,13 @@ import Sidebar from './sidebar/Sidebar';
 class AppAdmin extends Component {
    render() {
       return (
-         <Sidebar />
+         <div>
+            <Sidebar />
+            <div style={{ marginLeft: '228px' }}>
+               {this.props.children}
+            </div>
+         </div>
+
       );
    }
 }

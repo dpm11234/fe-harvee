@@ -8,6 +8,9 @@ import Contact from './pages/contact/Contact';
 import ProdDetail from './components/prod-detail/ProdDetail';
 import Login from './pages/login/Login';
 import MyCart from './pages/my-cart/MyCart';
+import Dashboard from './layout/Admin/dashboard/Dashboard';
+import Product from './layout/Admin/product/Product';
+import Order from './layout/Admin/order/Order';
 
 function App() {
   return (
@@ -60,7 +63,32 @@ function App() {
         }} />
 
         <Route path="/login" component={Login} />
-        <Route path="/admin" component={AppAdmin} />
+        <Route exact path="/admin" component={AppAdmin} />
+
+
+        <Route exact path="/admin/dashboard" render={() => {
+          return (
+            <AppAdmin>
+              <Dashboard />
+            </AppAdmin>
+          );
+        }} />
+
+        <Route exact path="/admin/product" render={() => {
+          return (
+            <AppAdmin>
+              <Product />
+            </AppAdmin>
+          );
+        }} />
+
+        <Route exact path="/admin/order" render={() => {
+          return (
+            <AppAdmin>
+              <Order />
+            </AppAdmin>
+          );
+        }} />
 
       </Router>
     </div>

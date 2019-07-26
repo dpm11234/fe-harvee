@@ -1,0 +1,41 @@
+@import "../../../scss/abstracts/variables";
+
+.hv-add-prod {
+  background:#eeeeee;
+  border-radius: 5px;
+
+  .title {
+    border-left: 5px solid $harvee;
+  }
+
+  .line {
+    border-bottom: 1px solid #d1d1d1;
+  }
+
+  h4 {
+      color: $harvee;
+  }
+
+  .pick-prod {
+    height: 200px;
+    border-radius: 5px;
+    border: $harvee dashed 1px;
+    padding-top: 50px;
+
+    p {
+        font-weight: bold;
+        color: $harvee;
+    }
+  }
+
+  .hv-icon {
+    color: $harvee;
+    font-size: 100px;
+    cursor: pointer;
+  }
+
+  .content {
+      border-radius: 5px;
+      background: white;
+  }
+}
