@@ -214,26 +214,26 @@ class ProdDetail extends Component {
                             <div className="policy ">
                                 <a className href>
                                     <button className="text-left mt-2 btn btn-policy text-uppercase w-100">
-                                        <i className="fa fa-user" />
-                                        Member privileges
+                                    <i class="far fa-users-class mr-2"></i>
+                                        Member access
                       </button>
                                 </a>
                                 <a className href>
                                     <button className="text-left mt-2 btn btn-policy text-uppercase w-100">
-                                        <i className="fa fa-truck" />
+                                    <i class="far fa-shipping-fast mr-2"></i>
                                         Shipment policy
                       </button>
                                 </a>
                                 <a className href>
                                     <button className="text-left mt-2 btn btn-policy text-uppercase w-100">
-                                        <i className="fa fa-bitcoin" />
+                                        <i class="far fa-coins mr-2"></i>
                                         100% MONEY
                                         BACK
                       </button>
                                 </a>
                                 <a className href>
                                     <button className="text-left my-2 btn btn-policy text-uppercase w-100">
-                                        <i className="fa fa-hourglass-start" />
+                                    <i class="fal fa-hourglass-start mr-2"></i>
                                         24h support
                       </button>
                                 </a>

@@ -1,0 +1,41 @@
+@import "../../../../scss/abstracts/variables";
+
+.hv-ram {
+  .custom-file-input {
+    background: blue;
+    cursor: pointer;
+    opacity: 0;
+    height: 100%;
+  }
+
+  .input-file-choose-bg {
+    cursor: pointer;
+    border-radius: 5px;
+    border: $harvee dashed 1px;
+    background-image: url(../../../../assets/images/thumb.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hv-gallery {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+  }
+
+  .hv-package {
+    border: #ced4da dashed 1px;
+  }
+
+  .hv-picture {
+    width: 150px;
+  }
+
+  .btn-del {
+    position: absolute;
+    background: #ced4da;
+    border: none;
+    border-radius: 50%;
+    right: 10px;
+    top: 10px;
+  }
+}

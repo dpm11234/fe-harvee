@@ -11,6 +11,7 @@ import MyCart from './pages/my-cart/MyCart';
 import Dashboard from './layout/Admin/dashboard/Dashboard';
 import Product from './layout/Admin/product/Product';
 import Order from './layout/Admin/order/Order';
+import Ram from './layout/Admin/product/ram/Ram';
 
 function App() {
   return (
@@ -45,7 +46,7 @@ function App() {
             </AppClient>
           );
         }} />
-    
+
         <Route exact path="/detail" render={() => {
           return (
             <AppClient>
@@ -78,6 +79,14 @@ function App() {
           return (
             <AppAdmin>
               <Product />
+            </AppAdmin>
+          );
+        }} />
+
+        <Route exact path="/admin/ram" render={() => {
+          return (
+            <AppAdmin>
+              <Ram />
             </AppAdmin>
           );
         }} />

@@ -31,6 +31,8 @@ class ListProduct extends Component {
         // }, 100);
     }
 
+    //Carousel
+
     createChildren = products => products.map((product, i) =>
         <div key={product.id}>
             <ProdCard product={product} />
